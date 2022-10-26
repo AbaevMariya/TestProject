@@ -1,8 +1,6 @@
-import time
-
 from selenium.common.exceptions import NoSuchElementException
 from .locators import BasePageLocators
-from .catalog_page import CatalogPageLocators
+from .locators import CatalogPageLocators
 
 class BasePage():
 
@@ -19,12 +17,8 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
-    #
-    # def go_to_login_page(self):
-    #     self.browser.find_element(*MainPageLocators.LOGIN_BTN).click()
 
     def should_be_autorized_user(self):
-        time.sleep(2)
         assert self.element_is_present(*BasePageLocators.USER_ICON)
 
     def add_product_in_busket(self):

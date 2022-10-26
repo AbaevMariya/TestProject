@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import MainPageLocators
-from .catalog_page import CatalogPageLocators
+from .locators import CatalogPageLocators
+
 
 class MainPage(BasePage):
 
@@ -13,6 +14,9 @@ class MainPage(BasePage):
     def go_to_login_page(self):
         self.browser.find_element(*MainPageLocators.LOGIN_BTN).click()
 
-    def go_to_busket(self):
-        self.browser.find_element(*CatalogPageLocators.PRODUCT_BTN).click()
+    # def go_to_busket(self):
+    #     self.browser.find_element(*CatalogPageLocators.PRODUCT_BTN).click()
+
+
+
 
